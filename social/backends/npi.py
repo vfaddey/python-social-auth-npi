@@ -2,6 +2,7 @@ from social_core.backends.open_id import OpenIdAuth
 
 
 class NPIOAuth2(OpenIdAuth):
+    name = 'npi-id'
     URL = 'id.tutor-npi.leetpost.ru'
     AUTHORIZATION_URL = "http://%s/oidc/authorize" % URL
     ACCESS_TOKEN_URL = "http://%s/oidc/token" % URL
