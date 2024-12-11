@@ -1,7 +1,7 @@
-from social_core.backends.open_id import OpenIdAuth
+from social_core.backends.oauth import BaseOAuth2
 
 
-class NPIOAuth2(OpenIdAuth):
+class NPIOAuth2(BaseOAuth2):
     name = 'npi-id'
     URL = 'id.tutor-npi.leetpost.ru'
     AUTHORIZATION_URL = "http://%s/oidc/authorize" % URL
