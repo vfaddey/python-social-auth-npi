@@ -15,7 +15,8 @@ class NPIOAuth2(BaseOAuth2):
             "first_name": response.get('first_name'),
             "last_name": response.get('last_name'),
             "fullname": response.get('first_name') + " " + response.get('last_name'),
-            "email": response.get("email", "")
+            "email": response.get("email", ""),
+            "username": response.get("email", "").split("@")[0],
         }
 
     def user_data(self, access_token, *args, **kwargs):
